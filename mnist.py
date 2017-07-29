@@ -17,8 +17,8 @@ K.set_image_dim_ordering('th')
 seed = 7
 numpy.random.seed(seed)
 # load data
-test = pd.read_csv('C:/Users/ElMoghazy/Desktop/test.csv')
-training = pd.read_csv('C:/Users/ElMoghazy/Desktop/train.csv')
+test = pd.read_csv('test.csv')
+training = pd.read_csv('train.csv')
 X_test2 = test
 train = ["pixel" + str(x) for x in range(784)]
 X_train = training[train]
@@ -39,7 +39,7 @@ num_classes = 10
 
 
 # define the larger model
-def larger_model():
+def model():
     # create model
     model = Sequential()
 
