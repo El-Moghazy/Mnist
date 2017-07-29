@@ -63,7 +63,7 @@ def model():
 
 
 # build the model
-model = larger_model()
+model = model()
 # Fit the model
 model.fit(X_train, y_train, epochs=5, batch_size=200)
 # Final evaluation of the model
