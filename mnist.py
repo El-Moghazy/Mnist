@@ -42,15 +42,15 @@ num_classes = 10
 def larger_model():
     # create model
     model = Sequential()
-    # CONV => RELU => POOL
+
     model.add(Conv2D(20, kernel_size=5, padding="same",input_shape=(1, 28, 28)))
     model.add(Activation("relu"))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    # CONV => RELU => POOL
+
     model.add(Conv2D(50, kernel_size=5, padding="same"))
     model.add(Activation("relu"))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    # Flatten => RELU layers
+
     model.add(Flatten())
     model.add(Dense(500))
     model.add(Activation("relu"))
